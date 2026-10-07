@@ -14,20 +14,24 @@
 3) Change directory
 
 └─$  mkdir myproject     ( create  a folder ) 
+
 └─$  mkdir -p a/b/c      (Create nested folder) 
+
 └─$  rmdir  myproject     (remove empty folder ) 
 
-Create files 
+4) Create files 
 └─$ touch myfile.txt          ( Create emty file ) 
 └─$  echo "Hello" > file.txt   (create file with txt ) 
 └─$   nano myfile.txt           ( open file in nano editor ) 
 
-View file contents 
+5) View file contents 
 └─$  cat file.txt          ( Show entire file ) 
 └─$  head -5 file.txt      ( show first  5 terms ) 
 └─$  tails -5 file.txt     ( show last 5 lines ) 
-└─$  less file.txt         ( Scroll through fill (press q to quiet ) 
-7) Copy, Move, Rename, Delete
+└─$  less file.txt         ( Scroll through fill (press q to quiet )
+
+
+6) Copy, Move, Rename, Delete
 
 └─$ cp file.txt backup.txt             => copy file
 └─$ cp -r folder1 folder2              => copy folder recursively
@@ -39,18 +43,18 @@ View file contents
 
               User & Password Commands
 
-8) Who am I?
+7) Who am I?
 
 └─$ whoami                             => shows current username
 
 
-9) Kali:
+8) Kali:
 
 └─$ id                                 => shows user ID, group ID,
                                          and groups
 
 
-10) Switch users
+9) Switch users
 
 └─$ su root                            => switch to root user (root pass)
 └─$ su - john                          => switch to user "john"
@@ -58,19 +62,19 @@ View file contents
 └─$ exit                               => go back to previous user
 
 
-11) Run commands as root
+10) Run commands as root
 
 └─$ sudo apt update                    => run single command as root
 └─$ sudo -i                            => run single command as root
 
 
-12) Change password
+11) Change password
 
 └─$ passwd                             => change your password
 └─$ sudo passwd john                   => change another user's password
                                       => change your password
 
-13) Add / Delete users
+12) Add / Delete users
 
 └─$ sudo adduser john                  => create new user john
 └─$ sudo deluser john                  => delete user "john"
@@ -79,7 +83,7 @@ View file contents
 
                 System Information Commands
 
-14) System info
+13) System info
 
 └─$ uname -a                           => full system info (kernel, architecture)
 └─$ hostname                           => show computer name
@@ -87,14 +91,14 @@ View file contents
 └─$ date                               => current date and time
 
 
-15) Disk & Memory
+14) Disk & Memory
 
 └─$ df -h                              => disk space usage (human readable)
 └─$ free -h                            => RAM usage
 └─$ du -sh folder/                     => folder size
 
 
-16) Process management
+15) Process management
 
 └─$ top                                => live process monitor (press q to quit)
 └─$ htop                               => better process monitor (colorful)
@@ -108,7 +112,7 @@ View file contents
 
                                                 => 7=rwx | 6=rw | 5=rx | 4=r
 
-17) View permissions
+16) View permissions
 
 └─$ ls -la
 
@@ -119,14 +123,14 @@ r = read (4), w = write (2), x = execute (1)
 + owner | group | other
 
 
-18) Change permissions
+17) Change permissions
 
 └─$ chmod 755 script.sh               => rwx for owner, rx for group/other
 └─$ chmod +x script.sh                => add execute permission for everyone
 └─$ chmod 644 file.txt                => rw for owner, read-only for others
 
 
-19) Change ownership
+18) Change ownership
 
 └─$ sudo chown root file.txt          => change owner to root
 └─$ sudo chown kali:kali file.txt    => change owner and group
@@ -135,46 +139,46 @@ r = read (4), w = write (2), x = execute (1)
 
                          Network Commands
 
-20) Check your IP address
+19) Check your IP address
 
 └─$ ip a                               => show all network interfaces & IP
 └─$ ifconfig                           => same (older command)
 └─$ hostname -I                        => quick - just show your IP
 
 
-21) Test connectivity
+20) Test connectivity
 
 └─$ ping google.com                    => check if you can reach a host
 └─$ ping -c 4 google.com               => send only 4 pings
 
 
-22) Network Connections
+21) Network Connections
 
 └─$ ss -tulng                          => show open ports & listening services
 └─$ netstat -tulng                     => same (older command)
 
 
-23) DNS lookup
+22) DNS lookup
 
 └─$ nslookup google.com                => find IP of a domain
 └─$ dig google.com                     => get detailed DNS info
 
 
-24) Download files
+23) Download files
 
 └─$ wget https://example.com/file.zip  => download a file
 └─$ curl https://example.com           => fetch web content
 
                          Package Management & Updates
 
-25) Update & Upgrade Kali (do this regularly!)
+24) Update & Upgrade Kali (do this regularly!)
 
 └─$ sudo apt update                    => refresh package lists
 └─$ sudo apt upgrade -y               => upgrade all installed packages
 └─$ sudo apt full-upgrade -y           => full system upgrade
 
 
-26) Install & Remove packages
+25) Install & Remove packages
 
 └─$ sudo apt install nmap              => install a package
 └─$ sudo apt remove nmap               => remove a package
@@ -182,7 +186,7 @@ r = read (4), w = write (2), x = execute (1)
 └─$ sudo apt autoremove                => remove unused dependencies
 
 
-27) Search for packages
+26) Search for packages
 
 └─$ apt search wireshark               => find a package
 └─$ apt show nmap                      => show package details
@@ -191,7 +195,7 @@ r = read (4), w = write (2), x = execute (1)
 
                          Search & Find Commands
 
-28) Find files
+27) Find files
 
 └─$ find / -name "password.txt"        => search entire system
 └─$ find /home -name "*.txt"           => find all .txt files in /home
@@ -199,7 +203,7 @@ r = read (4), w = write (2), x = execute (1)
 └─$ locate passwords.txt                => fast search (uses database)
 
 
-29) Search inside files
+28) Search inside files
 
 └─$ grep "password" file.txt           => search for text in a file
 └─$ grep -r "admin" /var/log/          => search recursively in folder
@@ -207,7 +211,7 @@ r = read (4), w = write (2), x = execute (1)
 └─$ grep -n "root" /etc/passwd         => show line numbers
 
 
-30) Command history
+29) Command history
 
 └─$ history                            => show all previous commands
 └─$ history | grep nmap                => find specific commands in history
