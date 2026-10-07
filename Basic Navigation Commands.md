@@ -1,12 +1,18 @@
-print curent directory (Whoami) /  (home/kali) 
+1) print curent directory (Whoami) /  (home/kali) 
+
 └─$  pwd       
 
-List file and Folder 
+2) List file and Folder 
+
 └─$  ls      (simple list ) 
+
 └─$  ls-la   (detailed list with hiden list ) 
+
 └─$  ls-lh   (human-readble file size ) 
 
-Change directory 
+
+3) Change directory
+
 └─$  mkdir myproject     ( create  a folder ) 
 └─$  mkdir -p a/b/c      (Create nested folder) 
 └─$  rmdir  myproject     (remove empty folder ) 
